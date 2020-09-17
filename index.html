@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<style type="text/css">
+		body {
+			/*background-color: Dimgray; */
+			background-image: linear-gradient(to bottom right, Black, Mediumspringgreen);
+		}
+/* ============================= Main image positioning in main screen ============================ */ 
+		#locator { 
+			position: absolute; 
+			visibility: visible; 
+			left: 400px; 
+			top: 50px; 
+			height: 640px; 
+			width: 480px;
+			border-style: solid;
+			border-width: 5px;
+			border-color: red;  
+		}
+
+/* ============================= Vertical menu CSS definitions ============================ */		
+		.vertical-menu {
+		  width: 200px;
+		  border-style: solid;
+		  border-width: 2px;
+		  border-color: Gray; 
+		  box-shadow: 0 0 20px 0 #ccc;
+		}
+
+		.vertical-menu a {
+		  background-color: #eee;
+		  color: black;
+		  display: block;
+		  padding: 5px;
+		  text-decoration: none;
+		}
+
+		.vertical-menu a:hover {
+		  background-color: #0000CD;
+		  color: white;
+		  box-shadow: 0 0 20px 0 #FF8C00;
+		}
+
+		.vertical-menu a.active {
+		  background-image: linear-gradient(to right, Dodgerblue, Ghostwhite);
+		  color: Darkblue;
+		  font-weight: bold;
+		  border-style: solid;
+		  border-width: 1px;
+		  border-color: Gray; 
+		}
+
+/* =========================  Control panel buttons section ("Exit" only button)  ===================  */
+		.btn {
+		  border: 2px solid black;
+		  background-color: white;
+		  color: black;
+		  padding: 14px 28px;
+		  font-size: 16px;
+		  cursor: pointer;
+		}
+
+		/* Red */
+		.exit {
+		  border-color: #f44336;
+		  color: red
+		}
+
+		.exit:hover {
+		  background: #f44336;
+		  color: white;
+		}
+		
+		
+
+	</style>
+</head>
+<body>
+
+<h2><font color="yellow">Site Name</font></h2>
+
+<!--===================================== Vertical menu section ================================-->
+	<div class="vertical-menu">
+	  <a href="#" class="active">SPECIFICATIONS</a>
+	  <a href="siteOverview1.pdf"> SITE OVERVIEW</a>
+	  <a href="siteTestProcedures1.pdf">TEST PROCEDURES</a>
+	  <a href="#.pdf">RADIO LINKS CONFIGURATION</a>
+	  <a href="#">COMMUNICATION INFORMATION</a>
+	</div>
+<br><br>
+	<div class="vertical-menu">
+	  <a href="#" class="active">ACCOMPANYING</a>
+	  <a href="#">CONSOLE UM</a>
+	  <a href="calibProcedures2.pdf">EQUIP #1 TM</a>
+	  <a href="#">EQUIP #2 TM</a>
+	  <a href="#">OPTICAL EQUIP</a>
+	  <a href="#">OPTICAL TM</a>
+	</div>
+<br><br>
+<!--<button class="btn exit" onclick="window.close()">Exit</button> -->
+<button class="btn exit" onclick="history.back()">Exit</button>
+	
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!--===================================== main image pointer ================================-->
+	<div id="locator">
+	<img src="SitePictorialView.jpg" usemap="#siteelements" ><br>
+
+<!---==================   Mapping hot areas on image for link section begins here  ==================-->
+		<map name="siteelements">
+		  <area shape="rect" coords="213, 580, 228, 621" href="IndoorCabinetContent - 1/index.html" />    <!-- cabinet -->
+		  <area shape="rect" coords="190, 595, 210, 630" href="C10554376-genset-F22.pdf" />    <!-- gen --> 
+		  <area shape="rect" coords="200, 11, 254, 70" href="TowerElements/index.html" />    <!-- towertop --> 
+		  <area shape="rect" coords="181, 461, 280, 580" href="towermidsectionelements.pdf" />    <!-- towermidsection --> 
+	   </map>
+<!---==================   Mapping hot areas for link section ends here  ==================--->
+	</div>
+	
+</body>
+</html>

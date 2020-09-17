@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Indoor Cabinet Main Elements Layout</title>
+    <link href="index.css" rel="stylesheet">
+    <script src="index.js"></script>
+	<style>
+		  body {
+			margin: 0px;
+			padding: 0px;
+		  }
+		  #buttons {
+			position: absolute;
+			top: 100px;
+			left: 200px;
+		  }
+		  #buttons > input {
+			border: 1px solid black;
+			background-color: Paleturquoise;
+			padding-top: 5px;
+			padding-right: 50px;
+			padding-bottom: 5px;
+			padding-left: 10px;
+			display: block;
+			margin-top: 5px;
+		  }
+/* ==================  Style of container div  =============    */
+		  input {
+		    width: 10%;
+		    padding: 10px 20px;
+		    margin: 8px 15px;
+		    box-sizing: border-box;
+		  }
+/* ==================  Style of menus title paragraphs  =============    */
+		  p.thicker {
+            padding-left: 20px;
+            font-style: italic;
+		    font-weight: 900;
+		    width: 12%;
+		    border: 2px solid red;
+		    background-color: Bisque;
+		  }	  
+		  p.thicker1 {
+		    padding-left: 20px;
+		    font-style: italic;
+		    font-weight: 900;
+		    width: 20%;
+		    border: 2px solid red;
+		    background-color: Bisque;
+		 } 	
+
+/* ================== Overlay display MAIN AC 230 PANEL container1 =============================*/	
+		.container1 {
+		  position: absolute;
+		  height: 40px;
+		  width: 200px;
+		  left: 530px;
+		  top: 120px;
+		}
+		#myDiv1 {
+		  height: 20px;
+		  width: 120px;
+		  background: blue;
+		  position: absolute;
+		  top: 10px;
+		  left: 20px;
+		}		
+		.overlay {
+		  position: absolute;
+		  top: 10px;
+		  left: 350px;	  
+		  bottom: 0; 
+		  background: rgb(0, 0, 0);
+		  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+		  color: #f1f1f1; 
+		  width: 50px;
+		  transition: .5s ease;
+		  opacity:0;
+		  color: white;
+		  font-size: 12px;
+		  padding: 20px;
+		  text-align: center;
+		}
+		.container1:hover .overlay {
+		  opacity: 1;
+		}
+/* ================== Overlay display MAIN 48VDC PANEL container2 =============================*/	
+		.container2 {
+		  position: absolute;
+		  height: 40px;
+		  width: 200px;
+		  left: 530px;
+		  top: 180px;
+		}
+		#myDiv2 {
+		  height: 20px;
+		  width: 120px;
+		  background: blue;
+		  position: absolute;
+		  top: 10px;
+		  left: 10px;
+		}		
+		.overlay {
+		  position: absolute;
+		  top: 10px;
+		  left: 300px;	  
+		  bottom: 0; 
+		  background: rgb(0, 0, 0);
+		  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+		  color: #f1f1f1; 
+		  width: 50px;
+		  transition: .5s ease;
+		  opacity:0;
+		  color: white;
+		  font-size: 12px;
+		  padding: 20px;
+		  text-align: center;
+		}
+		.container2:hover .overlay {
+		  opacity: 1;
+		}
+/* ================== Overlay display 48VDC TO 12/24VDC PANEL container3 =============================*/	
+		.container3 {
+		  position: absolute;
+		  height: 35px;
+		  width: 200px;
+		  left: 530px;
+		  top: 240px;
+		}
+		#myDiv3 {
+		  height: 20px;
+		  width: 120px;
+		  background: blue;
+		  position: absolute;
+		  top: 0px;
+		  left: 10px;
+		}		
+		.overlay {
+		  position: absolute;
+		  top: 10px;
+		  left: 300px;	  
+		  bottom: 0; 
+		  background: rgb(0, 0, 0);
+		  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+		  color: #f1f1f1; 
+		  width: 50px;
+		  transition: .5s ease;
+		  opacity:0;
+		  color: white;
+		  font-size: 12px;
+		  padding: 20px;
+		  text-align: center;
+		}
+		.container3:hover .overlay {
+		  opacity: 1;
+		}
+/* ================== Overlay display NVR+MICRO PC container4 =============================*/	
+		.container4 {
+		  position: absolute;
+		  height: 15px;
+		  width: 200px;
+		  left: 530px;
+		  top: 270px;
+		}
+		#myDiv4 {
+		  height: 10px;
+		  width: 120px;
+		  background: blue;
+		  position: absolute;
+		  top: 0px;
+		  left: 10px;
+		}		
+		.overlay {
+		  position: absolute;
+		  top: 10px;
+		  left: 300px;	  
+		  bottom: 0; 
+		  background: rgb(0, 0, 0);
+		  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+		  color: #f1f1f1; 
+		  width: 50px;
+		  transition: .5s ease;
+		  opacity:0;
+		  color: white;
+		  font-size: 12px;
+		  padding: 20px;
+		  text-align: center;
+		}
+		.container4:hover .overlay {
+		  opacity: 1;
+		}
+/* ================== Overlay display RADWIN container5 =============================*/	
+		.container5 {
+		  position: absolute;
+		  height: 10px;
+		  width: 200px;
+		  left: 530px;
+		  top: 310px;
+		}
+		#myDiv5 {
+		  height: 10px;
+		  width: 120px;
+		  background: blue;
+		  position: absolute;
+		  top: 0px;
+		  left: 10px;
+		}		
+		.overlay {
+		  position: absolute;
+		  top: 10px;
+		  left: 300px;	  
+		  bottom: 0; 
+		  background: rgb(0, 0, 0);
+		  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+		  color: #f1f1f1; 
+		  width: 50px;
+		  transition: .5s ease;
+		  opacity:0;
+		  color: white;
+		  font-size: 12px;
+		  padding: 20px;
+		  text-align: center;
+		}
+		.container5:hover .overlay {
+		  opacity: 1;
+		}
+/* ================== Overlay display CISCO WS-C3650 container6 =============================*/	
+		.container6 {
+		  position: absolute;
+		  height: 5px;
+		  width: 200px;
+		  left: 530px;
+		  top: 350px;
+		}
+		#myDiv6 {
+		  height: 10px;
+		  width: 120px;
+		  background: blue;
+		  position: absolute;
+		  top: 0px;
+		  left: 10px;
+		}		
+		.overlay {
+		  position: absolute;
+		  top: 10px;
+		  left: 300px;	  
+		  bottom: 0; 
+		  background: rgb(0, 0, 0);
+		  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+		  color: #f1f1f1; 
+		  width: 50px;
+		  transition: .5s ease;
+		  opacity:0;
+		  color: white;
+		  font-size: 12px;
+		  padding: 20px;
+		  text-align: center;
+		}
+		.container6:hover .overlay {
+		  opacity: 1;
+		}
+/* ================== Overlay display CLIENT EQUIPMENT container7 =============================*/	
+		.container7 {
+		  position: absolute;
+		  height: 20px;
+		  width: 200px;
+		  left: 530px;
+		  top: 390px;
+		}
+		#myDiv7 {
+		  height: 10px;
+		  width: 120px;
+		  background: blue;
+		  position: absolute;
+		  top: 0px;
+		  left: 10px;
+		}		
+		.overlay {
+		  position: absolute;
+		  top: 10px;
+		  left: 300px;	  
+		  bottom: 0; 
+		  background: rgb(0, 0, 0);
+		  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+		  color: #f1f1f1; 
+		  width: 50px;
+		  transition: .5s ease;
+		  opacity:0;
+		  color: white;
+		  font-size: 12px;
+		  padding: 20px;
+		  text-align: center;
+		}
+		.container7:hover .overlay {
+		  opacity: 1;
+		}
+/* ================== Overlay display TERMINAL BLOCK container8 =============================*/	
+		.container8 {
+		  position: absolute;
+		  height: 20px;
+		  width: 200px;
+		  left: 530px;
+		  top: 450px;
+		}
+		#myDiv8 {
+		  height: 10px;
+		  width: 120px;
+		  background: blue;
+		  position: absolute;
+		  top: 0px;
+		  left: 10px;
+		}		
+		.overlay {
+		  position: absolute;
+		  top: 10px;
+		  left: 300px;	  
+		  bottom: 0; 
+		  background: rgb(0, 0, 0);
+		  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+		  color: #f1f1f1; 
+		  width: 50px;
+		  transition: .5s ease;
+		  opacity:0;
+		  color: white;
+		  font-size: 12px;
+		  padding: 20px;
+		  text-align: center;
+		}
+		.container8:hover .overlay {
+		  opacity: 1;
+		}
+/* ================== Overlay display BATTERIES container9 =============================*/	
+		.container9 {
+		  position: absolute;
+		  height: 100px;
+		  width: 200px;
+		  left: 530px;
+		  top: 500px;
+		}
+		#myDiv9 {
+		  height: 10px;
+		  width: 120px;
+		  background: blue;
+		  position: absolute;
+		  top: 30px;
+		  left: 10px;
+		}		
+		.overlay {
+		  position: absolute;
+		  top: 10px;
+		  left: 300px;	  
+		  bottom: 0; 
+		  background: rgb(0, 0, 0);
+		  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+		  color: #f1f1f1; 
+		  width: 50px;
+		  transition: .5s ease;
+		  opacity:0;
+		  color: white;
+		  font-size: 12px;
+		  padding: 20px;
+		  text-align: center;
+		}
+		.container9:hover .overlay {
+		  opacity: 1;
+		}
+/* ================== Overlay display CABINET STAND container10 =============================*/	
+		.container10 {
+		  position: absolute;
+		  height: 100px;
+		  width: 200px;
+		  left: 530px;
+		  top: 600px;
+		}
+		#myDiv10 {
+		  height: 10px;
+		  width: 120px;
+		  background: blue;
+		  position: absolute;
+		  top: 30px;
+		  left: 10px;
+		}		
+		.overlay {
+		  position: absolute;
+		  top: 10px;
+		  left: 300px;	  
+		  bottom: 0; 
+		  background: rgb(0, 0, 0);
+		  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+		  color: #f1f1f1; 
+		  width: 50px;
+		  transition: .5s ease;
+		  opacity:0;
+		  color: white;
+		  font-size: 12px;
+		  padding: 20px;
+		  text-align: center;
+		}
+		.container10:hover .overlay {
+		  opacity: 1;
+		}
+	</style>	
+</head>
+
+<body>
+
+<!-- ======================= Canvas dimensions definition & event listener  ==================  -->
+<canvas id="canvas" width="416" height="700"></canvas>
+
+<!-- ======================= Clear picture button div  =======================================  
+<div id="buttons">
+	<input type="button" id="clear" value="Clear">
+</div>
+	
+<script>
+// bind event handler to clear button
+	var canvas = document.getElementById('canvas');
+	var context = canvas.getContext('2d'); 
+	document.getElementById('clear').addEventListener('click', function() {
+	context.clearRect(0, 0, canvas.width, canvas.height)}, false );
+</script>
+-->
+<!-- ======================= Title of subject spec document  =====================================  -->
+<br>  
+<center><font size="4" color="blue"><strong>Indoor Cabinet Main Elements Layout</strong></font></center><br>
+
+<!-- ================== Overlay containers display section in hover  ================================  -->
+	<div class="container1">
+	  <div id="myDiv1" class="overlay" onclick="myFunction1()">MAIN AC 230 PANEL</div>
+		<script>
+			function myFunction1() {
+			window.open('230VAC_panel/index.html');
+			}
+		</script>
+	  </div>
+
+	<div class="container2">
+	  <div id="myDiv2" class="overlay" onclick="myFunction2()">MAIN 48VDC PANEL</div>
+		<script>
+			function myFunction2() {
+			window.open('48VDC_panel/index.html');
+			}
+		</script>
+	  </div>
+
+	<div class="container3">
+	  <div id="myDiv3" class="overlay" onclick="myFunction3()">48VDC TO 12/24VDC PANEL</div>
+		<script>
+			function myFunction3() {
+			window.open('48to24_12VDC_panel/index.html');
+			}
+		</script>
+	  </div>
+
+	<div class="container4">
+	  <div id="myDiv4" class="overlay" onclick="myFunction4()">NVR+MICRO PC</div>
+		<script>
+			function myFunction4() {
+			window.open('NvrMicroPc_panel/index.html');
+			}
+		</script>
+	  </div>
+
+	<div class="container5">
+	  <div id="myDiv5" class="overlay" onclick="myFunction5()">RADWIN SHELF</div>
+		<script>
+			function myFunction5() {
+			window.open('Radwin.jpg');
+			}
+		</script>
+	  </div>
+
+	<div class="container6">
+	  <div id="myDiv6" class="overlay" onclick="myFunction6()">CISCO WS3650</div>
+		<script>
+			function myFunction6() {
+			window.open('switchws3650.jpg');
+			}
+		</script>
+	  </div>
+
+	<div class="container7">
+	  <div id="myDiv7" class="overlay" onclick="myFunction7()">CLIENT EQUIPMENT</div>
+		<script>
+			function myFunction7() {
+			window.open('TerminalShelfContent - 1/index.html');
+			}
+		</script>
+	  </div>
+
+	<div class="container8">
+	  <div id="myDiv8" class="overlay" onclick="myFunction8()">TERMINAL BLOCK</div>
+		<script>
+			function myFunction8() {
+			window.open('terminalblock.pdf');
+			}
+		</script>
+	  </div>
+	
+	<div class="container9">
+	  <div id="myDiv9" class="overlay" onclick="myFunction9()">BATTERIES</div>
+		<script>
+			function myFunction9() {
+			window.open('Battery TPL 159AH.pdf');
+			}
+		</script>
+	  </div>
+	
+	<div class="container10">
+	  <div id="myDiv10" class="overlay">CABINET STAND</div>
+	</div>
+
+<!-- ======================= contextmenu section starts here  =====================================  -->
+		<div class="container" oncontextmenu="return showContextMenu(event);">
+		<br><br>
+		&nbsp;&nbsp;&nbsp;
+		<p class="thicker1"><font size="3" style="italic">Right Click for Panels Dwgs</font></p><br>
+		<input id="datasheets" name="datasheets">	
+			<div id="contextMenu" class="context-menu">
+				<ul>
+					<li><a href="230VAC_panel/index.html">MAIN AC 230</a></li>
+					<li><a href="48VDC_panel/index.html">POWER SYSTEM 48VDC</a></li>
+					<li><a href="48to24_12VDC_panel/index.html">48VDC TO 12/24 VDC</a></li>	
+					<li><a href="NvrMicroPc_panel/index.html">NVD & MICRO PC</a></li>
+					<li><a href="Radwin.jpg">RADWIN</a></li>
+					<li><a href="switchws3650.jpg">SWITCH WS-C3650</a></li>
+					<li><a href="TerminalShelfContent - 1/index.html">CLIENT EQUIPMENT</a></li>
+					<li><a href="terminalblock.pdf">TERMINAL BLOCK</a></li>
+					<li>Hide on mouse clock</li>
+					<li>Hide on escape key</li>
+				</ul>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			window.onclick = hideContextMenu;
+			window.onkeydown = listenKeys;
+			var contextMenu = document.getElementById('contextMenu');
+		
+			function showContextMenu (event) {
+				contextMenu.style.display = 'block';
+//				contextMenu.style.left = event.clientX + 'px'; /* position context menu attached to mouse icon */
+//				contextMenu.style.top = event.clientY + 'px';
+				contextMenu.style.left = '30px';
+				contextMenu.style.top = '100px';					
+				return false;
+			}
+			
+			function hideContextMenu () {
+				contextMenu.style.display = 'none';
+			}
+			
+			function listenKeys (event) {
+				var keyCode = event.which || event.keyCode;
+				if(keyCode == 27){
+					hideContextMenu();
+				}				
+			}
+		</script>
+<!-- ======================= End of contextmenu section  =====================================  -->
+
+</body>
+</html>

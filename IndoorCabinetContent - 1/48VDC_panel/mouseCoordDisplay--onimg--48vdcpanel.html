@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+	width: 1318px;
+    height: 640px;
+    border: 1px solid black;
+    text-align: left;
+}
+</style>
+</head>
+<body>
+
+<div style="background-image: url(main48vdcpanel.jpg);" onclick="showCoords(event)" ><p id="demo"></div>
+
+<script>
+function showCoords(event) {
+    var cX = event.clientX;
+    var cY = event.clientY;
+    var coords1 = cX;
+    var coords2 = cY;
+    document.getElementById("demo").innerHTML = coords1 + "<br>" + coords2;
+}
+</script>
+
+</body>
+</html>
