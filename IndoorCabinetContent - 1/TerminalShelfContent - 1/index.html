@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Terminal Shelf Components Hardware</title>
+    <link href="index.css" rel="stylesheet">
+    <script src="index.js"></script>
+	<style>
+		  body {
+			margin: 0px;
+			padding: 0px;
+		  }
+		  #buttons {
+			position: absolute;
+			top: 100px;
+			left: 100px;
+		  }
+		  #buttons > input {
+			padding: 10px;
+			display: block;
+			margin-top: 5px;
+		  }
+
+/* ================== Overlay display MANGO#1 container1 =============================*/	
+		.container1 {
+		  position: absolute;
+		  height: 240px;
+		  width: 160px;
+		  left: 300px;
+		  top: 200px;
+		}
+		#myDiv1 {
+		  height: 50px;
+		  width: 100px;
+		  background: blue;
+		  position: absolute;
+		  top: 100px;
+		  left: 10px;
+		}		
+		.overlay {
+		  position: absolute;
+		  top: 10px;
+		  left: 300px;	  
+		  bottom: 0; 
+		  background: rgb(0, 0, 0);
+		  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+		  color: #f1f1f1; 
+		  width: 50px;
+		  transition: .5s ease;
+		  opacity:0;
+		  color: white;
+		  font-size: 20px;
+		  padding: 20px;
+		  text-align: center;
+		}
+		.container1:hover .overlay {
+		  opacity: 1;
+		}
+
+/* ================== Overlay display MANGO#2 container2 =============================*/	
+		.container2 {
+		  position: absolute;
+		  height: 240px;
+		  width: 160px;
+		  left: 470px;
+		  top: 200px;
+		}
+		#myDiv2 {
+		  height: 50px;
+		  width: 100px;
+		  background: blue;
+		  position: absolute;
+		  top: 100px;
+		  left: 10px;
+		}		
+		.overlay {
+		  position: absolute;
+		  top: 10px;
+		  left: 300px;	  
+		  bottom: 0; 
+		  background: rgb(0, 0, 0);
+		  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+		  color: #f1f1f1; 
+		  width: 50px;
+		  transition: .5s ease;
+		  opacity:0;
+		  color: white;
+		  font-size: 20px;
+		  padding: 20px;
+		  text-align: center;
+		}
+		.container2:hover .overlay {
+		  opacity: 1;
+		}
+
+/* ================== Overlay display MOXA container3 =============================*/	
+		.container3 {
+		  position: absolute;
+		  height: 300px;
+		  width: 80px;
+		  left: 720px;
+		  top: 200px;
+		}
+		#myDiv3 {
+		  height: 50px;
+		  width: 80px;
+		  background: blue;
+		  position: absolute;
+		  top: 100px;
+		  left: 10px;
+		}		
+		.overlay {
+		  position: absolute;
+		  top: 10px;
+		  left: 300px;	  
+		  bottom: 0; 
+		  background: rgb(0, 0, 0);
+		  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+		  color: #f1f1f1; 
+		  width: 50px;
+		  transition: .5s ease;
+		  opacity:0;
+		  color: white;
+		  font-size: 20px;
+		  padding: 20px;
+		  text-align: center;
+		}
+		.container3:hover .overlay {
+		  opacity: 1;
+		}
+	
+/* ================== Overlay display ADAM container4 =============================*/	
+		.container4 {
+		  position: absolute;
+		  height: 250px;
+		  width: 100px;
+		  left: 800px;
+		  top: 200px;
+		}
+		#myDiv4 {
+		  height: 50px;
+		  width: 80px;
+		  background: blue;
+		  position: absolute;
+		  top: 100px;
+		  left: 10px;
+		}		
+		.overlay {
+		  position: absolute;
+		  top: 10px;
+		  left: 300px;	  
+		  bottom: 0; 
+		  background: rgb(0, 0, 0);
+		  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+		  color: #f1f1f1; 
+		  width: 50px;
+		  transition: .5s ease;
+		  opacity:0;
+		  color: white;
+		  font-size: 20px;
+		  padding: 20px;
+		  text-align: center;
+		}
+		.container4:hover .overlay {
+		  opacity: 1;
+		}
+
+/* ================== Overlay display Contactor container5 =============================*/	
+		.container5 {
+		  position: absolute;
+		  height: 200px;
+		  width: 90px;
+		  left: 900px;
+		  top: 250px;
+		}
+		#myDiv5 {
+		  height: 50px;
+		  width: 120px;
+		  background: blue;
+		  position: absolute;
+		  top: 100px;
+		  left: 10px;
+		}		
+		.overlay {
+		  position: absolute;
+		  top: 10px;
+		  left: 300px;	  
+		  bottom: 0; 
+		  background: rgb(0, 0, 0);
+		  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+		  color: #f1f1f1; 
+		  width: 100px;
+		  transition: .5s ease;
+		  opacity:0;
+		  color: white;
+		  font-size: 20px;
+		  padding: 20px;
+		  text-align: center;
+		}
+		.container5:hover .overlay {
+		  opacity: 1;
+		}		
+	</style>	
+</head>
+
+<body>
+<!-- ======================= Main canvas declaration  =====================================  -->
+	<canvas id="canvas" width="940" height="640" onclick="showCoords(event)" ></canvas>
+
+<!-- ======================= Buttons section  =====================================  -->
+	<div id="buttons">
+		<input type="button" id="clear" value="Clear">
+	</div>
+		
+	<script>
+	// bind event handler to clear button
+		var canvas = document.getElementById('canvas');
+		var context = canvas.getContext('2d'); 
+		document.getElementById('clear').addEventListener('click', function() {
+		context.clearRect(0, 0, canvas.width, canvas.height)}, false );
+	</script>
+
+<!-- ======================= Title of subject spec document  =====================================  -->
+	<br>  
+	<center><font size="4" color="blue"><strong>TERMINAL SHELF COMPONENTS LAYOUT</strong></font></center><br>
+
+<!-- ================== Overlay containers display section in hover  ================================  -->
+	<div class="container1">
+	  <div id="myDiv1" class="overlay" onclick="myFunction1()">MANGO #1</div>
+		  <script>
+			function myFunction1() {
+			window.open('Pegasus-T_datasheet-v2__Mango.pdf');
+			}
+		  </script>
+	</div>
+
+	<div class="container2">
+	  <div id="myDiv2" class="overlay" onclick="myFunction1()">MANGO #2</div>
+		  <script>
+			function myFunction1() {
+			window.open('Pegasus-T_datasheet-v2__Mango.pdf');
+			}
+		  </script>
+	  </div>
+
+	<div class="container3">
+	  <div id="myDiv3" class="overlay" onclick="myFunction2()">MOXA</div>
+		  <script>
+			function myFunction2() {
+			window.open('NPort_IA5000_Series__Moxa.pdf');
+			}
+		  </script>	  
+	  </div>
+
+	<div class="container4">
+	  <div id="myDiv4" class="overlay" onclick="myFunction3()">ADAM</div>
+	  	<script>
+			function myFunction3() {
+			window.open('ADAM_6066__Adam.pdf');
+			}
+		</script>
+	</div>
+
+	<div class="container5">
+	  <div id="myDiv5" class="overlay" onclick="myFunction4()">CONTACTOR</div>
+	  	<script>
+			function myFunction4() {
+			window.open('Contactor_ISKRA -- KD20-10.jpg');
+			}
+		</script>
+	</div>
+
+<!-- ======================= contextmenu section starts here  =====================================  -->
+	<div class="container" oncontextmenu="return showContextMenu(event);">
+		<br><br>
+		&nbsp;&nbsp;&nbsp;
+		<label for="datasheets"><font size="2">Right Click for Data Sheets</font></label><br>
+		<input id="datasheets" name="datasheets">	
+			<div id="contextMenu" class="context-menu">
+				<ul>
+					<li><a href="Pegasus-T_datasheet-v2__Mango.pdf">MANGO</a></li>
+					<li><a href="NPort_IA5000_Series__Moxa.pdf">MOXA</a></li>
+					<li><a href="ADAM_6066__Adam.pdf">ADAM</a></li>
+					<li><a href="Contactor_ISKRA -- KD20-10.jpg">CONTACTOR</a></li>
+					<li class="separator"></li>
+					<li>Hide on mouse clock</li>
+					<li>Hide on escape key</li>
+				</ul>
+			</div>
+	</div>
+
+	<script type="text/javascript">
+		window.onclick = hideContextMenu;
+		window.onkeydown = listenKeys;
+		var contextMenu = document.getElementById('contextMenu');
+	
+		function showContextMenu (event) {
+			contextMenu.style.display = 'block';
+//			contextMenu.style.left = event.clientX + 'px'; /* position context menu attached to mouse icon */
+//			contextMenu.style.top = event.clientY + 'px';
+			contextMenu.style.left = '5px';
+			contextMenu.style.top = '250px';					
+			return false;
+		}
+		
+		function hideContextMenu () {
+			contextMenu.style.display = 'none';
+		}
+		
+		function listenKeys (event) {
+			var keyCode = event.which || event.keyCode;
+			if(keyCode == 27){
+				hideContextMenu();
+			}				
+		}
+	</script>
+<!-- ======================= End of contextmenu section  =====================================  -->
+
+</body>
+</html>
